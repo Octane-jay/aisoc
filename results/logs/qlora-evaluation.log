@@ -1,0 +1,99 @@
+
+[2026-09-02 19:48:40 CST] QLoRA evaluation started; GPU=3; adapter=/data/hyc/poc/checkpoints/foundation-sec-qlora-24class-balanced-30k-v1
+index, name, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%]
+0, NVIDIA GeForce RTX 4090, 49140 MiB, 44956 MiB, 3551 MiB, 100 %
+1, NVIDIA GeForce RTX 4090, 49140 MiB, 16314 MiB, 32193 MiB, 100 %
+2, NVIDIA GeForce RTX 4090, 49140 MiB, 16554 MiB, 31953 MiB, 100 %
+3, NVIDIA GeForce RTX 4090, 49140 MiB, 16875 MiB, 31632 MiB, 77 %
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.04s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:01,  1.01it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.06it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.51it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.28it/s]
+processed=25/1300
+processed=50/1300
+processed=75/1300
+processed=100/1300
+processed=125/1300
+processed=150/1300
+processed=175/1300
+processed=200/1300
+processed=225/1300
+processed=250/1300
+processed=275/1300
+processed=300/1300
+processed=325/1300
+processed=350/1300
+processed=375/1300
+processed=400/1300
+processed=425/1300
+processed=450/1300
+processed=475/1300
+processed=500/1300
+processed=525/1300
+processed=550/1300
+processed=575/1300
+processed=600/1300
+processed=625/1300
+processed=650/1300
+processed=675/1300
+processed=700/1300
+processed=725/1300
+processed=750/1300
+processed=775/1300
+processed=800/1300
+processed=825/1300
+processed=850/1300
+processed=875/1300
+processed=900/1300
+processed=925/1300
+processed=950/1300
+processed=975/1300
+processed=1000/1300
+processed=1025/1300
+processed=1050/1300
+processed=1075/1300
+processed=1100/1300
+processed=1125/1300
+processed=1150/1300
+processed=1175/1300
+processed=1200/1300
+processed=1225/1300
+processed=1250/1300
+processed=1275/1300
+processed=1300/1300
+{
+  "samples": 1300,
+  "ex_samples": 600,
+  "mcq_samples": 0,
+  "gen_samples": 700,
+  "loose_contains_f1": 0.39952974731967494,
+  "rouge_l": 0.5106513355480722,
+  "mcq_accuracy": 0.0,
+  "json_valid_rate": 0.9783333333333334
+}
+{
+  "samples": 1300,
+  "ex_samples": 600,
+  "mcq_samples": 0,
+  "gen_samples": 700,
+  "loose_contains_f1": 0.39952974731967494,
+  "rouge_l": 0.5106513355480722,
+  "mcq_accuracy": null,
+  "json_valid_rate": 0.9783333333333334
+}
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.511 seconds.
+Prefix dict has been built successfully.
+Batches:   0%|          | 0/21 [00:00<?, ?it/s]Batches:   5%|▍         | 1/21 [00:00<00:05,  3.62it/s]Batches:  19%|█▉        | 4/21 [00:00<00:01, 11.54it/s]Batches:  33%|███▎      | 7/21 [00:00<00:00, 17.11it/s]Batches:  48%|████▊     | 10/21 [00:00<00:00, 20.77it/s]Batches:  67%|██████▋   | 14/21 [00:00<00:00, 24.27it/s]Batches:  90%|█████████ | 19/21 [00:00<00:00, 30.74it/s]Batches: 100%|██████████| 21/21 [00:00<00:00, 23.93it/s]
+Batches:   0%|          | 0/21 [00:00<?, ?it/s]Batches:  14%|█▍        | 3/21 [00:00<00:00, 21.61it/s]Batches:  29%|██▊       | 6/21 [00:00<00:00, 24.64it/s]Batches:  43%|████▎     | 9/21 [00:00<00:00, 26.14it/s]Batches:  62%|██████▏   | 13/21 [00:00<00:00, 28.53it/s]Batches:  76%|███████▌  | 16/21 [00:00<00:00, 27.27it/s]Batches: 100%|██████████| 21/21 [00:00<00:00, 32.70it/s]
+{
+  "samples": 1300,
+  "structured_samples": 600,
+  "generation_samples": 700,
+  "rouge_l_jieba_whitespace": 0.36638483412498163,
+  "semantic_similarity": 0.8259626235089337,
+  "structured_loose_leaf_f1": 0.39952974731967494,
+  "structured_exact_leaf_f1": 0.29891601825029085,
+  "structured_json_valid_rate": 0.98,
+  "generation_rouge_l_jieba_whitespace": 0.3887071695628833,
+  "generation_semantic_similarity": 0.8928370707375662
+}
+[2026-09-02 21:20:07 CST] QLoRA evaluation finished; exit_code=0

@@ -1,0 +1,101 @@
+{
+  "name": "foundation-sec-qlora-24class-balanced-30k-v1",
+  "base_model": {
+    "name": "Foundation-Sec-8B-Instruct",
+    "env_var": "MODEL_PATH",
+    "default_relative_to_models_root": "Foundation-Sec-8B-Instruct",
+    "fingerprint_sha256": {
+      "config.json": "09b92d21ad46c9812b000ec94b0bb39b0fe7c180afc576799b012b0d4c62f73e",
+      "model.safetensors.index.json": "c8d2635fd74bfa99d68ab5ae8305df7f68980772ddbd36fe8640cbf2f18bc37a",
+      "generation_config.json": "70b5284d5524b4bf8a87a78b9a0b03a332c5730a5efffc904a531cd5d2ff9797"
+    }
+  },
+  "data": {
+    "train": "data/SEVENLLM-24class-balanced-30k-v1/train.jsonl",
+    "train_sha256": "fe5305b85a0e68be26ebb16b5523fb6e986aff099589c77e251fe2268b569b2b",
+    "train_records": 30000,
+    "test": "data/SEVENLLM-24class-balanced-30k-v1/test.jsonl",
+    "test_sha256": "1238da4e5c8699d9f504886818f6db9699630603973bfa662f27aedde0c58df8",
+    "test_records": 1300,
+    "test_ex_records": 600,
+    "test_gen_records": 700,
+    "selection": {
+      "seed": 42,
+      "per_category": 1250,
+      "shared_categories": 24,
+      "per_category_seed_pattern": "f\"{seed}:{category}\""
+    }
+  },
+  "tokenizer": {
+    "prompt_template": "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n",
+    "max_length": 1280
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_use_double_quant": true
+  },
+  "lora": {
+    "r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "bias": "none",
+    "task_type": "CAUSAL_LM",
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  },
+  "training": {
+    "seed": 42,
+    "num_train_epochs": 1,
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 16,
+    "effective_batch_size": 64,
+    "max_steps": 468,
+    "learning_rate": 1e-05,
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.03,
+    "optim": "paged_adamw_8bit",
+    "bf16": true,
+    "tf32": true,
+    "gradient_checkpointing": true,
+    "group_by_length": true,
+    "logging_steps": 1,
+    "save_steps": 250,
+    "save_total_limit": 2,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0
+  },
+  "observed_run": {
+    "gpu": "NVIDIA GeForce RTX 4090 48GB (single card)",
+    "train_runtime_seconds": 8418.8,
+    "train_loss": 1.0929724223848083,
+    "exit_code": 0,
+    "date": "2026-09-02"
+  },
+  "inference": {
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "adapter_merged": false,
+    "batch": 1
+  },
+  "scoring": {
+    "semantic_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "coarse_semantic_thresholds": [0.65, 0.7, 0.75, 0.8],
+    "primary_threshold": 0.8,
+    "rouge_l_tokenizer": "jieba for Chinese, whitespace otherwise",
+    "structured_matching": "json leaf values, field/path agnostic, exact or substring or cosine>=tau, Hungarian one-to-one"
+  },
+  "environment": {
+    "python": "3.10.21",
+    "torch": "2.4.1+cu121",
+    "transformers": "4.46.3",
+    "peft": "0.13.2",
+    "accelerate": "1.0.1",
+    "bitsandbytes": "0.50.2",
+    "datasets": "5.0.1",
+    "sentence-transformers": "3.3.1",
+    "jieba": "0.42.1",
+    "scipy": "1.15.3",
+    "numpy": "2.2.6"
+  }
+}

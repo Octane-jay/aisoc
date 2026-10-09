@@ -1,0 +1,156 @@
+{
+  "generated_by": "code/report_scenarios.py",
+  "scenario_categories": {
+    "告警研判": [
+      "Security Alert Generation",
+      "Cybersecurity Event Classification",
+      "Threat Analysis",
+      "Risk Assessment",
+      "Incident Response Planning",
+      "Protection Strategy Research",
+      "Correlation Analysis",
+      "Important Event Extraction",
+      "Impact Scope"
+    ],
+    "攻击链": [
+      "Attack Strategy Analysis",
+      "Attack Means Analysis",
+      "Attack Target Intelligence Gathering",
+      "Attack Tool Identification",
+      "Attacker Information Extraction",
+      "Malware Feature Extraction",
+      "Impact Scope",
+      "Threat Analysis",
+      "Main Relation Extraction",
+      "Correlation Analysis"
+    ],
+    "日志漏洞": [
+      "Vulnerability Information Extraction",
+      "Vulnerability Exploitation Analysis",
+      "Security Policy Audit",
+      "Key Entity Recognition",
+      "Main Relation Extraction",
+      "Summary Generation",
+      "Risk Assessment",
+      "Protection Strategy Research"
+    ]
+  },
+  "train_composition": {
+    "label": "训练集构成（SEVENLLM 24 类均衡 30,000 条）",
+    "total": 30000,
+    "ex_total": 13043,
+    "gen_total": 16957,
+    "rows": [
+      [
+        "告警研判",
+        2464,
+        8786
+      ],
+      [
+        "攻击链",
+        4603,
+        6647
+      ],
+      [
+        "日志漏洞",
+        2351,
+        5149
+      ]
+    ],
+    "scenario_union": 23750
+  },
+  "test_composition": {
+    "label": "测试集构成（SEVENLLM 官方 test.jsonl 全量）",
+    "total": 1300,
+    "ex_total": 600,
+    "gen_total": 700,
+    "rows": [
+      [
+        "告警研判",
+        127,
+        564
+      ],
+      [
+        "攻击链",
+        327,
+        399
+      ],
+      [
+        "日志漏洞",
+        93,
+        205
+      ]
+    ],
+    "scenario_union": 1228
+  },
+  "baseline_metrics": {
+    "告警研判": {
+      "ex_samples": 127,
+      "gen_samples": 564,
+      "coarse_semantic_f1_tau0.80": 0.32180741930592793,
+      "coarse_semantic_f1_tau0.75": 0.3482647719049969,
+      "loose_leaf_f1": 0.2057031383363396,
+      "exact_leaf_f1": 0.11048144842083865,
+      "json_valid_rate": 0.9763779527559056,
+      "rouge_l_jieba_whitespace": 0.2597906863925453,
+      "semantic_similarity": 0.8425574496731902
+    },
+    "攻击链": {
+      "ex_samples": 327,
+      "gen_samples": 399,
+      "coarse_semantic_f1_tau0.80": 0.47273868388560897,
+      "coarse_semantic_f1_tau0.75": 0.5032448926854737,
+      "loose_leaf_f1": 0.36622754341466895,
+      "exact_leaf_f1": 0.24617993036921032,
+      "json_valid_rate": 0.9602446483180428,
+      "rouge_l_jieba_whitespace": 0.3034625235564692,
+      "semantic_similarity": 0.8575074895282736
+    },
+    "日志漏洞": {
+      "ex_samples": 93,
+      "gen_samples": 205,
+      "coarse_semantic_f1_tau0.80": 0.5007632757216258,
+      "coarse_semantic_f1_tau0.75": 0.5244857448556569,
+      "loose_leaf_f1": 0.4103014769906122,
+      "exact_leaf_f1": 0.29031965032088175,
+      "json_valid_rate": 0.956989247311828,
+      "rouge_l_jieba_whitespace": 0.2942508358432346,
+      "semantic_similarity": 0.8594902116987037
+    }
+  },
+  "finetuned_metrics": {
+    "告警研判": {
+      "ex_samples": 127,
+      "gen_samples": 564,
+      "coarse_semantic_f1_tau0.80": 0.36363618985777213,
+      "coarse_semantic_f1_tau0.75": 0.3938445850651627,
+      "loose_leaf_f1": 0.2352409529943302,
+      "exact_leaf_f1": 0.15494725757986816,
+      "json_valid_rate": 0.9921259842519685,
+      "rouge_l_jieba_whitespace": 0.35756350584310315,
+      "semantic_similarity": 0.8860239572558842
+    },
+    "攻击链": {
+      "ex_samples": 327,
+      "gen_samples": 399,
+      "coarse_semantic_f1_tau0.80": 0.5402077239709908,
+      "coarse_semantic_f1_tau0.75": 0.5644251984975427,
+      "loose_leaf_f1": 0.43329046999843784,
+      "exact_leaf_f1": 0.32355406403572207,
+      "json_valid_rate": 0.9724770642201835,
+      "rouge_l_jieba_whitespace": 0.4035129424375378,
+      "semantic_similarity": 0.8973754946151772
+    },
+    "日志漏洞": {
+      "ex_samples": 93,
+      "gen_samples": 205,
+      "coarse_semantic_f1_tau0.80": 0.5516471355970328,
+      "coarse_semantic_f1_tau0.75": 0.5811243963152763,
+      "loose_leaf_f1": 0.46981634794625604,
+      "exact_leaf_f1": 0.3629860941298262,
+      "json_valid_rate": 0.989247311827957,
+      "rouge_l_jieba_whitespace": 0.3686620415200517,
+      "semantic_similarity": 0.894270084543926
+    }
+  }
+}

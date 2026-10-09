@@ -1,0 +1,14 @@
+# 本次实验验证过的版本（Python 3.10）；transformers 必须锁 4.46.x，5.x 会让 peft 导入失败。
+torch==2.4.1
+transformers==4.46.3
+peft==0.13.2
+accelerate==1.0.1
+bitsandbytes==0.50.2
+datasets==5.0.1
+sentence-transformers==3.3.1
+tokenizers==0.20.3
+huggingface-hub==0.36.2
+safetensors==0.8.0
+jieba==0.42.1
+scipy==1.15.3
+numpy==2.2.6

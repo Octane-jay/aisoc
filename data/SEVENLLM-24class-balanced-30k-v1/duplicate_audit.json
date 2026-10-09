@@ -1,0 +1,27 @@
+{
+  "test_input_overlap_train_ids": [
+    53483,
+    53728,
+    53739,
+    56051,
+    56065,
+    74575,
+    74580,
+    74582,
+    74583,
+    77051,
+    82415,
+    89177,
+    89564,
+    90008,
+    90433,
+    90562,
+    90733
+  ],
+  "excluded": {
+    "train_only_category": 6040,
+    "empty_output": 18,
+    "duplicate_train_task": 96,
+    "test_input_overlap": 17
+  }
+}

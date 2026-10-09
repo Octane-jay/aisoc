@@ -1,0 +1,7 @@
+code/__pycache__/
+*.pyc
+poc-runs/
+run_all.log
+*.tmp
+FILE_HASHES.txt.local
+data/raw/SEVENLLM-Dataset/train.jsonl

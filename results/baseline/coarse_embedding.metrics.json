@@ -1,0 +1,11 @@
+{
+  "structured_samples": 600,
+  "json_valid_rate": 0.965,
+  "coarse_embedding_macro_f1": {
+    "0.65": 0.5247183374467773,
+    "0.7": 0.49692338003560715,
+    "0.75": 0.46856838964516956,
+    "0.8": 0.44181942390403955
+  },
+  "matching": "field/path agnostic; exact/substring or cosine similarity threshold; one-to-one Hungarian matching"
+}

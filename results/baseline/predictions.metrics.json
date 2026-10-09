@@ -1,0 +1,10 @@
+{
+  "samples": 1300,
+  "ex_samples": 600,
+  "mcq_samples": 2,
+  "gen_samples": 698,
+  "loose_contains_f1": 0.3367293122692856,
+  "rouge_l": 0.40268821305908437,
+  "mcq_accuracy": 1.0,
+  "json_valid_rate": 0.965
+}

@@ -1,0 +1,8 @@
+{
+  "structured_samples": 600,
+  "strict_macro_f1": 0.08286556304136507,
+  "normalized_soft_macro_f1": 0.11483855523870275,
+  "json_valid_rate": 0.965,
+  "semantic_threshold": 0.72,
+  "matching": "canonical field aliases; exact/entity or embedding cosine threshold"
+}
